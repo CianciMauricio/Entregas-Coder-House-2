@@ -90,16 +90,16 @@ main section article ul li{
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.75);
   color: #E0F2FE;
-  text-align: left;
+  max-width: 1200px;  
   gap: 1rem;
   padding: 1.5rem;
-  margin: 1rem;
-  position: relative;
-  width: 100%;
+  border-radius: 8px;
+  margin: 40px auto;
+  width: 90%;
 }
 
 /* divison de clases para distintos colores entre parrafos,links, titulos y decoración */
@@ -160,17 +160,34 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.915);
-  padding: 10px;
+  
+  /* Transparencia equilibrada */
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  
+  /* Efecto de desenfoque de fondo */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Borde fino sutil para definir la caja */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  gap: 24px;
+  padding: 40px 20px;
   border-radius: 8px;
+  max-width: 1300px;
+  width: 100%;
 }
+
 
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.60);
+  gap: 16px;
+  padding: 20px;
   border-radius: 8px;
 }
 
@@ -182,4 +199,95 @@ figure {
   justify-content: center;
   gap: 1rem;
   padding: 1.7rem;
+}
+
+/* GRID Y MEDIA QUERIES */
+.magos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.aprender {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.aprender img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.magos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* Vista PC / pantallas medianas y grandes (a partir de 1024px)*/
+@media (min-width: 1024px) {
+  /* section de Grandes Magos */
+  .magos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "tamariz blaine"
+      "houdini lavand";
+      align-items: stretch;
+    gap: 2rem;
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .imagen-tamariz {
+    grid-area: tamariz;
+  }
+  
+  .imagen-lavand {
+    grid-area: lavand;
+  }
+
+  .imagen-blaine {
+    grid-area: blaine;
+  }
+
+  .imagen-houdini {
+    grid-area: houdini;
+  }
+
+/* Section de Aprender Magia */
+.aprender{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "instituto escuela bazar";
+    align-items: stretch;
+  gap: 2rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.imagen-escuela {
+  grid-area: escuela;
+}
+
+.imagen-instituto {
+  grid-area: instituto;
+}
+
+.imagen-bazar {
+  grid-area: bazar;
+}
 }
