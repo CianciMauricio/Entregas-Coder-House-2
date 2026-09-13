@@ -1,3 +1,30 @@
+/* BURGER */
+
+.burger{
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  font-size: 2rem;
+}
+
+.burger {
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  font-size: 2rem;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.burger:hover {
+  background-color: #FFD700;
+  color: #2a2201;
+}
+
+.burger:focus {
+  outline: 2px solid #FFD700;
+}
+
+.burger:active {
+  transform: scale(0.92);
+}
 /* Fuente e imagen de fondo para TODOS los body del sitio */
 * {
   margin: 0;
@@ -35,17 +62,16 @@ figure figcaption {
 
 /* HEADER */
 header {
-  display: flex;
+/*   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   color: #E0F2FE;
   text-align: center;
   padding: 20px;
   width: 100%;
 }
 
-header nav ul,
-footer ul {
+header nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -54,6 +80,31 @@ footer ul {
   padding: 0;
 }
 
+.link-menu {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+
+.link-menu:visited {
+  color: #ffa200;
+}
+
+.link-menu:hover {
+  background-color: #2a2201;
+  color: #E0F2FE;
+}
+
+.link-menu:active {
+  text-decoration: underline;
+}
+
+.link-menu:focus {
+  background-color: #2a2201;
+  outline: 2px solid #FFD700;
+}
 /* MAIN */
 
 main {
@@ -65,7 +116,7 @@ main {
 }
 
 main section ol article li,
-main ul{
+main ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +127,7 @@ main ul{
   margin: 2px;
 }
 
-main section article ul li{
+main section article ul li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,12 +145,21 @@ footer {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.75);
   color: #E0F2FE;
-  max-width: 1200px;  
+  max-width: 1200px;
   gap: 1rem;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 40px auto;
   width: 90%;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
 /* divison de clases para distintos colores entre parrafos,links, titulos y decoración */
@@ -160,15 +220,15 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   /* Transparencia equilibrada */
   background-color: rgba(0, 0, 0, 0.75);
   color: #ffffff;
-  
+
   /* Efecto de desenfoque de fondo */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  
+
   /* Borde fino sutil para definir la caja */
   border: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -201,9 +261,76 @@ figure {
   padding: 1.7rem;
 }
 
+/* ESTADOS INTERACTIVOS DE IMÁGENES Y TARJETAS */
+.aprender img,
+.magos img,
+.aprender article,
+.magos figure,
+.inicio figure {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.aprender img:hover,
+.magos img:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.aprender article:active,
+.magos figure:active {
+  transform: scale(0.98);
+}
+
+/* CARRUSEL: visible solo en mobile */
+.carrusel-galeria img,
+.carousel-control-prev,
+.carousel-control-next {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.carrusel-galeria img:hover {
+  transform: scale(1.03);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-mobile {
+  display: block;         
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: 2px solid #FFD700;
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  transform: scale(0.9);
+}
+
+.carousel-indicators button {
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.carousel-indicators button:hover {
+  opacity: 1;
+}
+
+.carousel-indicators button:focus {
+  outline: 2px solid #FFD700;
+}
+
+.carousel-indicators button:active {
+  transform: scale(0.85);
+}
+
 /* GRID Y MEDIA QUERIES */
+/* MOBILE FIRST */
 .magos {
-  display: grid;
+  display: none;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   width: 100%;
@@ -216,6 +343,30 @@ figure {
   gap: 1.5rem;
   width: 100%;
   padding: 1.5rem;
+}
+
+.inicio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.aprender img:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.aprender article:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.magos figure:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.inicio figure:focus {
+  box-shadow: 5px 5px 10px #929191;
 }
 
 .aprender img {
@@ -234,26 +385,110 @@ figure {
   border-radius: 8px;
 }
 
+/* MEDIA QUERIES */
 
-/* Vista PC / pantallas medianas y grandes (a partir de 1024px)*/
-@media (min-width: 1024px) {
-  /* section de Grandes Magos */
+/* Vista para Tabletas */
+
+@media (min-width: 768px) {
   .magos {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "tamariz blaine"
       "houdini lavand";
-      align-items: stretch;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+
+.aprender {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 2fr;
+  grid-template-areas:
+    "instituto escuela"
+    "bazar bazar";
+  align-items: stretch;
+  gap: 2rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.inicio {
+  display: block;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  align-items: stretch;
+  grid-template-areas:
+    "principal principal";
+  width: 100%;
+}
+
+.aprender img:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.aprender article:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.magos figure:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+.inicio figure:focus {
+  box-shadow: 5px 5px 10px #929191;
+}
+
+  .carousel-mobile {
+    display: none;          
+  }
+}
+
+/* Vista PC / pantallas medianas y grandes (a partir de 1024px)*/
+@media (min-width: 1024px) {
+
+  /* section de Grandes Magos */
+  .magos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "tamariz blaine houdini lavand";
+    align-items: stretch;
     gap: 2rem;
     margin: 1rem;
     padding: 2rem;
   }
 
+  .magos figure:focus {
+    box-shadow: 5px 5px 10px #929191;
+  }
+
+  /* SECTION INICIO */
+  .inicio {
+    display: block;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    align-items: stretch;
+    grid-template-areas:
+      "principal principal principal principal";
+    width: 100%;
+  }
+
+  .inicio figure:focus {
+    box-shadow: 5px 5px 10px #929191;
+  }
+
+  .imagen-principal {
+    grid-area: principal;
+  }
+
   .imagen-tamariz {
     grid-area: tamariz;
   }
-  
+
   .imagen-lavand {
     grid-area: lavand;
   }
@@ -266,28 +501,40 @@ figure {
     grid-area: houdini;
   }
 
-/* Section de Aprender Magia */
-.aprender{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    "instituto escuela bazar";
+  /* Section de Aprender Magia */
+  .aprender {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "instituto escuela bazar";
     align-items: stretch;
-  gap: 2rem;
-  margin: 1rem;
-  padding: 2rem;
-}
+    gap: 2rem;
+    margin: 1rem;
+    padding: 2rem;
+  }
 
-.imagen-escuela {
-  grid-area: escuela;
-}
+  .aprender img:focus {
+    box-shadow: 5px 5px 10px #929191;
+  }
 
-.imagen-instituto {
-  grid-area: instituto;
-}
+  .aprender article:focus {
+    box-shadow: 5px 5px 10px #929191;
+  }
 
-.imagen-bazar {
-  grid-area: bazar;
-}
+  .imagen-escuela {
+    grid-area: escuela;
+  }
+
+  .imagen-instituto {
+    grid-area: instituto;
+  }
+
+  .imagen-bazar {
+    grid-area: bazar;
+  }
+
+    .carousel-mobile {
+    display: none;          
+  }
 }

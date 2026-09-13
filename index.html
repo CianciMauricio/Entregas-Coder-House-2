@@ -5,39 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El mundo del ilusionismo / inicio</title>
-    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <!-- CSS BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-
-        <a href="#"><img src="./imagenes/logo-de-magia.png" alt="Logo de la página"></a>
-
-        <nav>
-            <ul>
-                <li class="link"><a class="link" href="#">Inicio</a></li>
-                <li class="link"><a class="link" href="./pages/beneficios.html">Beneficios</a></li>
-                <li class="link"><a class="link" href="./pages/tipos-de-magia.html">Tipos de Magia</a></li>
-                <li class="link"><a class="link" href="./pages/grandes-magos.html">Grandes Magos</a></li>
-                <li class="link"><a class="link" href="./pages/aprender-magia.html">Aprender Magia</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="./index.html"><img src="./imagenes/logo-de-magia.png"
+                        alt="Logo de la página"></a>
+                <!-- botón hamburgesa -->
+                <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    ☰
+                </button>
+                <!-- Menu de enlaces -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./pages/beneficios.html">Beneficios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./pages/tipos-de-magia.html">Tipos de Magia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./pages/grandes-magos.html">Grandes Magos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./pages/aprender-magia.html">Aprender Magia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <h1 class="underline">El Arte de la Magia: Más allá del Ilusionismo</h1>
-        <figure>
-            <img src="./imagenes/princial.webp" alt="hombre asombrando al publico">
-            <figcaption>Bienvenido a un espacio donde aprenderás la belleza del arte de la magia. Exploraremos sus
-                diferentes ramas,
-                los grandes referentes de la historia y el impacto positivo que este arte milenario puede aportar a tu
-                vida
-                diaria.</figcaption>
-        </figure>
+        <section class="inicio">
+            <article>
+                <figure class="imagen-principal" tabindex="0">
+                    <img src="./imagenes/princial.webp" alt="hombre asombrando al publico">
+                    <figcaption>Bienvenido a un espacio donde aprenderás la belleza del arte de la magia. Exploraremos
+                        sus
+                        diferentes ramas,
+                        los grandes referentes de la historia y el impacto positivo que este arte milenario puede
+                        aportar a tu
+                        vida
+                        diaria.</figcaption>
+                </figure>
+            </article>
+        </section>
 
         <section>
             <article>
@@ -54,7 +87,6 @@
 
 
 
-
     </main>
 
     <footer>
@@ -68,6 +100,10 @@
                         alt="Logo de Instagram"></a></li>
         </ul>
     </footer>
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

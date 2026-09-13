@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El mundo del ilusionismo / Grandes Magos</title>
+    <!-- CSS bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
@@ -15,7 +20,44 @@
 <body>
     <header>
 
-        <a href="../index.html"><img src="../imagenes/logo-de-magia.png" alt="Logo de la página"></a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="../index.html"><img src="../imagenes/logo-de-magia.png"
+                        alt="Logo de la página"></a>
+                <!-- botón hamburgesa -->
+                <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    ☰
+                </button>
+                <!-- Menu de enlaces -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./beneficios.html">Beneficios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./tipos-de-magia.html">Tipos de Magia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="#">Grandes Magos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./aprender-magia.html">Aprender Magia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <!--         <a href="../index.html"><img src="../imagenes/logo-de-magia.png" alt="Logo de la página"></a>
 
         <nav>
             <ul>
@@ -25,15 +67,63 @@
                 <li class="link"><a class="link" href="#">Grandes Magos</a></li>
                 <li class="link"><a class="link" href="./aprender-magia.html">Aprender Magia</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
 
     <main>
         <h1 class="underline">Grandes personajes históricos que dejó la magia</h1>
+
+        <!-- CARRUSEL -->
+        <section class="galeria carousel-mobile">
+            <div class="carrusel-galeria carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target=".carrusel-galeria" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target=".carrusel-galeria" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target=".carrusel-galeria" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target=".carrusel-galeria" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <figure>
+                            <img src="../imagenes/harry houdini.jpeg" class="d-block w-100" alt="Harry Houdini">
+                            <figcaption>El rey del escapismo</figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <img src="../imagenes/juan tamariz.jpg" class="d-block w-100" alt="Juan Tamariz">
+                            <figcaption>El maestro de la cartomagia</figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <img src="../imagenes/david blaine.jpg" class="d-block w-100" alt="David Blaine">
+                            <figcaption>La magia como fenómeno urbano</figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <img src="../imagenes/rene lavand.jpg" class="d-block w-100" alt="René Lavand">
+                            <figcaption>El hombre que dominó el mundo con una sola mano</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target=".carrusel-galeria"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target=".carrusel-galeria"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
         <section class="magos">
             <article class="imagen-houdini">
                 <h2>Harry Houdini (1874 – 1926)</h2>
-                <figure><img src="../imagenes/harry houdini.jpeg" alt="harry houdini en blanco y negro">
+                <figure tabindex="0"><img src="../imagenes/harry houdini.jpeg" alt="harry houdini en blanco y negro">
                     <figcaption>Considerado el rey del escapismo y la figura más icónica de la historia de la magia.
                         Houdini
                         fascinó al mundo entero por su impresionante habilidad para liberarse de esposas, cadenas,
@@ -49,7 +139,7 @@
 
             <article class="imagen-lavand">
                 <h2>René Lavand (1928 – 2015)</h2>
-                <figure><img src="../imagenes/rene lavand.jpg" alt="rene lavand en blanco y negro">
+                <figure tabindex="0"><img src="../imagenes/rene lavand.jpg" alt="rene lavand en blanco y negro">
                     <figcaption>Ilusionista argentino de fama mundial especializado en la cartomagia de cerca. Tras
                         sufrir
                         un accidente a los 9 años en el que perdió su brazo derecho, desarrolló una técnica técnica
@@ -64,7 +154,7 @@
 
             <article class="imagen-tamariz">
                 <h2>Juan Tamariz (1944 – 2026)</h2>
-                <figure><img src="../imagenes/juan tamariz.jpg" alt="juan tamariz posando con cartas">
+                <figure tabindex="0"><img src="../imagenes/juan tamariz.jpg" alt="juan tamariz posando con cartas">
                     <figcaption>Mago español aclamado mundialmente como una de las mentes más brillantes de la
                         cartomagia
                         contemporánea. Con su característico sombrero de copa, su humor extravagante y su violín
@@ -77,7 +167,8 @@
 
             <article class="imagen-blaine">
                 <h2>David Blaine (1973 – Presente)</h2>
-                <figure><img src="../imagenes/david blaine.jpg" alt="david blaine de perfil con cartas cayendo">
+                <figure tabindex="0"><img src="../imagenes/david blaine.jpg"
+                        alt="david blaine de perfil con cartas cayendo">
 
                     <figcaption>Revolucionó la magia en la década de 1990 al trasladar los trucos desde los grandes
                         escenarios teatrales directamente a la calle, enfocando las cámaras en las reacciones reales del
@@ -104,6 +195,10 @@
                         alt="Logo de Instagram"></a></li>
         </ul>
     </footer>
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
