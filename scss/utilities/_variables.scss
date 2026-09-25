@@ -1,0 +1,45 @@
+// COLORES
+
+$color-dorado: #FFD700;        // links, burger, acentos, contornos de focus
+$color-naranja: #ffa200;       // links ya visitados
+$color-marfil: #FFF8E7;        // títulos (h1, h2, h3)
+$color-texto-claro: #E0F2FE;   // texto de párrafos, listas, captions, header
+$color-hover-oscuro: #2a2201;  // fondo al pasar el mouse (nav y burger)
+$color-sombra: #929191;        // sombra de hover/focus en tarjetas
+$color-negro: #000000;         // color base de la sombra de texto
+$color-blanco: #ffffff;        // texto dentro de las cajas de section
+
+// Fondos semitransparentes ("las cajas" de section/article/footer)
+
+$fondo-section: rgba(0, 0, 0, 0.75);
+$fondo-article: rgba(0, 0, 0, 0.6);
+$borde-sutil: rgba(255, 255, 255, 0.1);
+
+// TIPOGRAFÍA
+
+$fuente: "Playfair Display", serif;
+
+
+// IMÁGENES
+
+$fondo-body: url('../imagenes/fondo.jpg');
+
+// GAPS Y PADDING
+
+$gap-mini: 0.5rem;
+$gap-chico: 1rem;
+$gap-mediano: 1.5rem;
+$gap-grande: 2rem;
+$padding-caja: 1.7rem;   
+
+// BORDES
+
+$radio-chico: 4px;
+$radio-grande: 8px;
+
+// SOMBRAS Y TRANSICIONES
+
+$sombra-texto: 2px 2px 4px $color-negro;
+$sombra-tarjeta: 5px 5px 10px $color-sombra;
+$transicion-rapida: 0.3s ease-in-out;
+$transicion-lenta: 0.5s ease-in-out;

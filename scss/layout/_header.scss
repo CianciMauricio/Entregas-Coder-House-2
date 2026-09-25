@@ -1,0 +1,10 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+header {
+  color: $color-texto-claro;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}

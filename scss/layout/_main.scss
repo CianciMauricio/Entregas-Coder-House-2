@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+main {
+  @include flex(column, center, center, $gap-grande);
+}
+
+main section ol article li,
+main ul {
+  @include flex(column, center, center, $gap-mini);
+  padding: 5px;
+  margin: 2px;
+}
+
+main section article ul li {
+  @include flex(column, center, flex-start, $gap-mini);
+  padding: 10px;
+  margin: 5px;
+}

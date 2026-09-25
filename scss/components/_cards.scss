@@ -1,0 +1,67 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+section {
+  @include flex(column, center, center, 24px);
+  background-color: $fondo-section;
+  color: $color-blanco;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid $borde-sutil;
+  padding: 40px 20px;
+  border-radius: $radio-grande;
+  max-width: 1300px;
+  width: 100%;
+}
+
+article {
+  @include flex(column, center, center, $gap-chico);
+  background-color: $fondo-article;
+  padding: 20px;
+  border-radius: $radio-grande;
+}
+
+figure {
+  @include flex(column, center, center, $gap-chico);
+  padding: $padding-caja;
+}
+
+// Tamaño de imagen dentro de las tarjetas de galería
+.aprender img,
+.magos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: $radio-grande;
+}
+
+// Transición compartida por todas las tarjetas interactivas
+.aprender img,
+.magos img,
+.aprender article,
+.magos figure,
+.inicio figure {
+  transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+}
+
+// Hover: solo en las imágenes
+.aprender img:hover,
+.magos img:hover {
+  transform: scale(1.03);
+  box-shadow: $sombra-tarjeta;
+}
+
+// Active: solo en las tarjetas (article/figure)
+.aprender article:active,
+.magos figure:active {
+  transform: scale(0.98);
+}
+
+// Focus: compartido — una sola vez, sin repetir por breakpoint
+.aprender img:focus,
+.aprender article:focus,
+.magos figure:focus,
+.inicio figure:focus {
+  box-shadow: $sombra-tarjeta;
+}

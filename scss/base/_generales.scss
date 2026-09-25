@@ -1,0 +1,58 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+body {
+  font-family: $fuente;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  color: $color-marfil;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: $sombra-texto;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-marfil;
+  font-size: 2.5rem;
+  gap: $gap-chico;
+  padding: $padding-caja;
+  font-weight: bold;
+  text-shadow: $sombra-texto;
+}
+
+h3 {
+  color: $color-marfil;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: $gap-grande;
+  margin-bottom: $gap-grande;
+  text-shadow: $sombra-texto;
+}
+
+p,
+figcaption,
+li {
+  color: $color-texto-claro;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: $sombra-texto;
+}
+
+figure figcaption {
+  font-size: 1.2rem;
+  color: $color-texto-claro;
+  text-align: center;
+  margin-top: $gap-mini;
+}
+
+.underline {
+  text-decoration: underline;
+}

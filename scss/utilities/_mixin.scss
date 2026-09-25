@@ -1,0 +1,33 @@
+// Flexbox
+
+@mixin flex($direction, $justify, $align, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Grid
+
+@mixin grid($columns, $rows, $areas, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  grid-template-areas: $areas;
+  gap: $gap;
+}
+
+// Breakpoints (mobile-first)
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin escritorio {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

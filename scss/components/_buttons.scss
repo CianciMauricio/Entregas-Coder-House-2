@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+.burger {
+  color: $color-dorado;
+  border: 1px solid $color-dorado;
+  font-size: 2rem;
+  transition: background-color $transicion-rapida, transform 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-dorado;
+    color: $color-hover-oscuro;
+  }
+
+  &:focus {
+    outline: 2px solid $color-dorado;
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+}

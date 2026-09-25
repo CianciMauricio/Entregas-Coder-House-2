@@ -1,0 +1,106 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+// Grilla de Grandes Magos
+
+.magos {
+  display: none; // en mobile, el carrusel ocupa este lugar
+  grid-template-columns: minmax(0, 1fr);
+  gap: $gap-mediano;
+  width: 100%;
+  padding: $gap-mediano;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "tamariz blaine"
+      "houdini lavand";
+    align-items: stretch;
+    gap: $gap-mediano;
+    padding: $gap-grande;
+  }
+
+  @include escritorio {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: "tamariz blaine houdini lavand";
+    align-items: stretch;
+    gap: $gap-grande;
+    margin: 1rem;
+    padding: $gap-grande;
+  }
+}
+
+// Grilla de Aprender Magia
+
+.aprender {
+  @include grid(minmax(0, 1fr), null, null, $gap-mediano);
+  width: 100%;
+  padding: $gap-mediano;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      "instituto escuela"
+      "bazar bazar";
+    align-items: stretch;
+    gap: $gap-grande;
+    margin: 1rem;
+    padding: $gap-grande;
+  }
+
+  @include escritorio {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: "instituto escuela bazar";
+    align-items: stretch;
+    gap: $gap-grande;
+    margin: 1rem;
+    padding: $gap-grande;
+  }
+}
+
+// Grilla de Inicio
+
+.inicio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  padding: $gap-chico;
+  gap: $gap-chico;
+
+  @include tablet {
+    display: block;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    align-items: stretch;
+    grid-template-areas: "principal principal";
+    width: 100%;
+  }
+
+  @include escritorio {
+    display: block;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    align-items: stretch;
+    grid-template-areas: "principal principal principal principal";
+    width: 100%;
+  }
+}
+
+// Asignación de áreas de grilla
+
+@include escritorio {
+  .imagen-principal { grid-area: principal; }
+  .imagen-tamariz   { grid-area: tamariz; }
+  .imagen-lavand    { grid-area: lavand; }
+  .imagen-blaine    { grid-area: blaine; }
+  .imagen-houdini   { grid-area: houdini; }
+  .imagen-escuela   { grid-area: escuela; }
+  .imagen-instituto { grid-area: instituto; }
+  .imagen-bazar     { grid-area: bazar; }
+}

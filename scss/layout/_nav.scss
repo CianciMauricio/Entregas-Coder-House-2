@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+header nav ul {
+  @include flex(row, space-evenly, center, $gap-grande);
+  list-style: none;
+  padding: 0;
+}
+
+.link-menu {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: $radio-chico;
+  transition: all $transicion-lenta;
+
+  &:visited {
+    color: $color-naranja;
+  }
+
+  &:hover {
+    background-color: $color-hover-oscuro;
+    color: $color-texto-claro;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    background-color: $color-hover-oscuro;
+    outline: 2px solid $color-dorado;
+  }
+}

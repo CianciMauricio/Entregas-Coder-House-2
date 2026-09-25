@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: $fondo-body;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+img,
+figure {
+  max-width: 100%;
+  margin-bottom: $gap-grande;
+}
