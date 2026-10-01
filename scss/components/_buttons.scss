@@ -1,4 +1,5 @@
 @use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
 
 .burger {
   color: $color-dorado;
@@ -12,10 +13,16 @@
   }
 
   &:focus {
-    outline: 2px solid $color-dorado;
+   @extend %foco-dorado;
   }
 
   &:active {
     transform: scale(0.92);
+  }
+  
+  &[aria-expanded="true"] {
+    transform: rotate(90deg);
+    background-color: $color-dorado;
+    color: $color-hover-oscuro;
   }
 }

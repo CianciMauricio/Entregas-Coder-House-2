@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El mundo del ilusionismo / Aprender Magia</title>
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- CSS BOOSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -55,9 +57,9 @@
     </header>
 
     <main>
-        <h1 class="underline">Escuelas/academias de magia</h1>
+        <h1 class="underline" data-aos="fade-down">Escuelas/academias de magia</h1>
         <section class="aprender">
-            <article class="imagen-escuela" tabindex="0">
+            <article class="imagen-escuela" data-aos="flip-left" data-aos-delay="0" tabindex="0">
                 <h2>Escuela de Magia Tamariz (España)</h2>
                 <img src="../imagenes/escuela tamariz.jpg" alt="logo de la escuela tamariz" tabindex="0">
                 <p>Fundada en Madrid por el legendario mago Juan Tamariz, es una de las instituciones más prestigiosas
@@ -65,7 +67,7 @@
                     psicología, el humor y la conexión con el espectador.</p>
             </article>
 
-            <article class="imagen-instituto" tabindex="0">
+            <article class="imagen-instituto" data-aos="flip-left" data-aos-delay="100" tabindex="0">
                 <h2>Instituto de Magia (España / Online)</h2>
                 <img src="../imagenes/instituto de magia.jpg" alt="logo de instituto de magia" tabindex="0">
                 <p>Una plataforma dedicada a la enseñanza moderna de las artes mágicas de forma estructurada. Combina
@@ -73,7 +75,7 @@
                     toda Latinoamérica y España.</p>
             </article>
 
-            <article class="imagen-bazar" tabindex="0">
+            <article class="imagen-bazar" data-aos="flip-left" data-aos-delay="200" tabindex="0">
                 <h2>Bazar Mágico (Argentina)</h2>
                 <img src="../imagenes/bazar de magia.jpg" alt="logo del bazar de magia" tabindex="0">
                 <p>Un referente histórico en Sudamérica para la formación de ilusionistas. Vinculada a espacios
@@ -98,6 +100,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- Script de AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 
 </html>

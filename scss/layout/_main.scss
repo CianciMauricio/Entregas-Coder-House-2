@@ -1,6 +1,5 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin" as *;
-@use "../utilities/extend" as *;
 
 main {
   @include flex(column, center, center, $gap-grande);

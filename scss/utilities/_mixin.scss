@@ -31,3 +31,12 @@
     @content;
   }
 }
+
+// Animaciones
+@mixin animacion($nombre, $duracion, $funcion, $ease-in-out, $delay: 0s){
+  animation-name: $nombre;
+  animation-duration: $duracion;
+  animation-timing-function: $funcion;
+  animation-delay: $delay;
+  animation-fill-mode: both;
+}

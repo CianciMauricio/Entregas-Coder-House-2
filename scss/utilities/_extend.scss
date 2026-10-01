@@ -1,2 +1,6 @@
 @use "variables" as *;
 @use "mixin" as *;
+
+%foco-dorado {
+  outline: 2px solid $color-dorado;
+}

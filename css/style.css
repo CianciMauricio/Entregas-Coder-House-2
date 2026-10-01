@@ -18,6 +18,10 @@ figure {
   margin-bottom: 2rem;
 }
 
+.burger:focus {
+  outline: 2px solid #FFD700;
+}
+
 body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -78,6 +82,24 @@ header {
   text-align: center;
   padding: 20px;
   width: 100%;
+}
+
+@keyframes aparecer-logo {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate -8deg;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate 0deg;
+  }
+}
+.navbar-brand img {
+  animation-name: aparecer-logo;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
 }
 
 footer {
@@ -166,6 +188,7 @@ header nav ul {
 .link-menu:hover {
   background-color: #2a2201;
   color: #E0F2FE;
+  transform: translateY(-3px);
 }
 .link-menu:active {
   text-decoration: underline;
@@ -263,32 +286,38 @@ header nav ul {
   }
 }
 
-@media (min-width: 1024px) {
-  .imagen-principal {
-    grid-area: principal;
-  }
-  .imagen-tamariz {
-    grid-area: tamariz;
-  }
-  .imagen-lavand {
-    grid-area: lavand;
-  }
-  .imagen-blaine {
-    grid-area: blaine;
-  }
-  .imagen-houdini {
-    grid-area: houdini;
-  }
-  .imagen-escuela {
-    grid-area: escuela;
-  }
-  .imagen-instituto {
-    grid-area: instituto;
-  }
-  .imagen-bazar {
-    grid-area: bazar;
-  }
+.imagen-principal {
+  grid-area: principal;
 }
+
+.imagen-tamariz {
+  grid-area: tamariz;
+}
+
+.imagen-lavand {
+  grid-area: lavand;
+}
+
+.imagen-blaine {
+  grid-area: blaine;
+}
+
+.imagen-houdini {
+  grid-area: houdini;
+}
+
+.imagen-escuela {
+  grid-area: escuela;
+}
+
+.imagen-instituto {
+  grid-area: instituto;
+}
+
+.imagen-bazar {
+  grid-area: bazar;
+}
+
 .burger {
   color: #FFD700;
   border: 1px solid #FFD700;
@@ -299,11 +328,13 @@ header nav ul {
   background-color: #FFD700;
   color: #2a2201;
 }
-.burger:focus {
-  outline: 2px solid #FFD700;
-}
 .burger:active {
   transform: scale(0.92);
+}
+.burger[aria-expanded=true] {
+  transform: rotate(90deg);
+  background-color: #FFD700;
+  color: #2a2201;
 }
 
 section {
@@ -350,32 +381,32 @@ figure {
   display: block;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.aprender img:hover,
+.magos img:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px #929191;
+}
+.aprender img:focus,
+.magos img:focus {
+  box-shadow: 5px 5px 10px #929191;
 }
 
-.aprender img,
-.magos img,
 .aprender article,
 .magos figure,
 .inicio figure {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-.aprender img:hover,
-.magos img:hover {
-  transform: scale(1.03);
+.aprender article:focus,
+.magos figure:focus,
+.inicio figure:focus {
   box-shadow: 5px 5px 10px #929191;
 }
 
 .aprender article:active,
 .magos figure:active {
   transform: scale(0.98);
-}
-
-.aprender img:focus,
-.aprender article:focus,
-.magos figure:focus,
-.inicio figure:focus {
-  box-shadow: 5px 5px 10px #929191;
 }
 
 /*# sourceMappingURL=style.css.map */

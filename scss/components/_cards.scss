@@ -26,7 +26,8 @@ figure {
   padding: $padding-caja;
 }
 
-// Tamaño de imagen dentro de las tarjetas de galería
+
+// Imágenes dentro de las tarjetas de galería: una sola vez, estados anidados
 .aprender img,
 .magos img {
   width: 100%;
@@ -34,34 +35,32 @@ figure {
   display: block;
   object-fit: cover;
   border-radius: $radio-grande;
+  transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: $sombra-tarjeta;
+  }
+
+  &:focus {
+    box-shadow: $sombra-tarjeta;
+  }
 }
 
-// Transición compartida por todas las tarjetas interactivas
-.aprender img,
-.magos img,
+// Tarjetas (article/figure) de galería: misma lógica
 .aprender article,
 .magos figure,
 .inicio figure {
   transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+
+  &:focus {
+    box-shadow: $sombra-tarjeta;
+  }
 }
 
-// Hover: solo en las imágenes
-.aprender img:hover,
-.magos img:hover {
-  transform: scale(1.03);
-  box-shadow: $sombra-tarjeta;
-}
-
-// Active: solo en las tarjetas (article/figure)
-.aprender article:active,
-.magos figure:active {
-  transform: scale(0.98);
-}
-
-// Focus: compartido — una sola vez, sin repetir por breakpoint
-.aprender img:focus,
-.aprender article:focus,
-.magos figure:focus,
-.inicio figure:focus {
-  box-shadow: $sombra-tarjeta;
+.aprender article,
+.magos figure {
+  &:active {
+    transform: scale(0.98);
+  }
 }

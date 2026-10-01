@@ -1,6 +1,5 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin" as *;
-@use "../utilities/extend" as *;
 
 // Grilla de Grandes Magos
 
@@ -94,7 +93,6 @@
 
 // Asignación de áreas de grilla
 
-@include escritorio {
   .imagen-principal { grid-area: principal; }
   .imagen-tamariz   { grid-area: tamariz; }
   .imagen-lavand    { grid-area: lavand; }
@@ -103,4 +101,3 @@
   .imagen-escuela   { grid-area: escuela; }
   .imagen-instituto { grid-area: instituto; }
   .imagen-bazar     { grid-area: bazar; }
-}
