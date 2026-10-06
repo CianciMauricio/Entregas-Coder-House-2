@@ -1,12 +1,11 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixin" as *;
-@use "../utilities/extend" as *;
 
 footer {
+  max-width: min($ancho-maximo-footer, 95vw);
   @include flex(column, space-evenly, center, $gap-chico);
   background-color: $fondo-section;
   color: $color-texto-claro;
-  max-width: 1200px;
   padding: 1.5rem;
   border-radius: $radio-grande;
   margin: 40px auto;

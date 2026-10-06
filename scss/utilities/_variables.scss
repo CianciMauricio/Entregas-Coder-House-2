@@ -26,16 +26,17 @@ $fondo-body: url('../imagenes/fondo.jpg');
 
 // GAPS Y PADDING
 
-$gap-mini: 0.5rem;
-$gap-chico: 1rem;
-$gap-mediano: 1.5rem;
-$gap-grande: 2rem;
-$padding-caja: 1.7rem;   
+$gap-base: 0.5rem;
+$gap-mini: $gap-base;          
+$gap-chico: $gap-base * 2;     
+$gap-mediano: $gap-base * 3;   
+$gap-grande: $gap-base * 4;    
+$padding-caja: 1.7rem;  
 
 // BORDES
 
 $radio-chico: 4px;
-$radio-grande: 8px;
+$radio-grande: $radio-chico * 2;
 
 // SOMBRAS Y TRANSICIONES
 
@@ -43,3 +44,8 @@ $sombra-texto: 2px 2px 4px $color-negro;
 $sombra-tarjeta: 5px 5px 10px $color-sombra;
 $transicion-rapida: 0.3s ease-in-out;
 $transicion-lenta: 0.5s ease-in-out;
+
+// ANCHOS
+
+$ancho-maximo-section: 1300px;
+$ancho-maximo-footer: 1200px;

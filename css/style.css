@@ -87,11 +87,11 @@ header {
 @keyframes aparecer-logo {
   from {
     opacity: 0;
-    transform: scale(0.8) rotate -8deg;
+    transform: scale(0.8) rotate(-8deg);
   }
   to {
     opacity: 1;
-    transform: scale(1) rotate 0deg;
+    transform: scale(1) rotate(0deg);
   }
 }
 .navbar-brand img {
@@ -103,6 +103,7 @@ header {
 }
 
 footer {
+  max-width: min(1200px, 95vw);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,7 +111,6 @@ footer {
   gap: 1rem;
   background-color: rgba(0, 0, 0, 0.75);
   color: #E0F2FE;
-  max-width: 1200px;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 40px auto;
@@ -267,7 +267,6 @@ header nav ul {
 }
 @media (min-width: 768px) {
   .inicio {
-    display: block;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 1fr;
     align-items: stretch;
@@ -277,7 +276,6 @@ header nav ul {
 }
 @media (min-width: 1024px) {
   .inicio {
-    display: block;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
     align-items: stretch;
@@ -338,6 +336,7 @@ header nav ul {
 }
 
 section {
+  max-width: min(1300px, 95vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,7 +349,6 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 40px 20px;
   border-radius: 8px;
-  max-width: 1300px;
   width: 100%;
 }
 

@@ -1,0 +1,15 @@
+# Dependencias — se reinstalan con "npm install" gracias a package-lock.json
+node_modules/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos y carpetas de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs si algo falla al instalar paquetes
+npm-debug.log*

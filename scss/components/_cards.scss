@@ -2,6 +2,7 @@
 @use "../utilities/mixin" as *;
 
 section {
+  max-width: min($ancho-maximo-section, 95vw);
   @include flex(column, center, center, 24px);
   background-color: $fondo-section;
   color: $color-blanco;
@@ -10,7 +11,6 @@ section {
   border: 1px solid $borde-sutil;
   padding: 40px 20px;
   border-radius: $radio-grande;
-  max-width: 1300px;
   width: 100%;
 }
 
