@@ -82,6 +82,7 @@ header {
   text-align: center;
   padding: 20px;
   width: 100%;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 @keyframes aparecer-logo {
@@ -282,6 +283,9 @@ header nav ul {
     grid-template-areas: "principal principal principal principal";
     width: 100%;
   }
+}
+.inicio > article {
+  grid-column: 1/-1;
 }
 
 .imagen-principal {
